@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cookie Editor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Cookie Editor</h1>
+  <div class="actions">
+    <button id="exportBtn">Export Cookies</button>
+    <button id="importBtn">Import Cookies</button>
+    <button id="clearBtn">Clear Cookies</button>
+  </div>
+  <div class="import-container">
+    <textarea id="cookieData" placeholder="Paste cookie JSON data here to import"></textarea>
+    <div class="import-options">
+      <label>
+        <input type="checkbox" id="clearBeforeImport" checked>
+        Clear existing cookies before import
+      </label>
+    </div>
+  </div>
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html> 

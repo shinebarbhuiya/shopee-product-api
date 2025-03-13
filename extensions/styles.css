@@ -1,0 +1,92 @@
+body {
+  font-family: Arial, sans-serif;
+  width: 400px;
+  padding: 15px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #3367d6;
+}
+
+#clearBtn {
+  background-color: #ea4335;
+}
+
+#clearBtn:hover {
+  background-color: #d33426;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  margin: 10px 0;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.import-options {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.import-options label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.import-options input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+#status {
+  margin-top: 15px;
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.warning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.import-container {
+  margin-top: 15px;
+} 
