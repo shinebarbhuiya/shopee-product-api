@@ -2,6 +2,8 @@
 
 This is a simple API for getting product data from Shopee.
 
+### [🎥 Watch Demo Video](https://youtu.be/ojey5ttAx18)
+
 ## Usage
 
 ```bash
@@ -32,6 +34,8 @@ The API documentation is available at `http://localhost:8000/docs`.
 - I've made a custom chrome extension to import and export the cookies. So, I will login from a new account and export the cookies and save it in the extension folder with the name "shopee_cookie.json" and then when the browser loads it will automatically load the cookies and the account will be logged in. (Can automate this process to login from a new account and export the cookies and save it in the extension folder with the name "shopee_cookie.json" and then when the browser loads it will automatically load the cookies and the account will be logged in.)
 
 - It gets all the calls that are being made in the background while the page is loading using cdp events and it looks for the main API that contains the product data. Out of all the XHR requests, it looks for the one that contains the url "api/v4/pdp/get_pc?" and then it will get the response and parse it to get the product data.
+
+- Currently, it won't work in headless mode but will have to figure out a way to make it work in headless mode.
 
 
 
