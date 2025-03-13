@@ -41,15 +41,15 @@ The API documentation is available at `http://localhost:8000/docs`.
 
 #### Issue 1: Shopee Captcha
 
-```text
+
 It is a very unique captcha to solve and there is no way to solve it using any library. So, the best solution would be to use machine learning to solve it. I found a way to solve it temporarily by using https://www.sadcaptcha.com/shopee-captcha-solver but it doesn't work most of the time. So, we need to find a better solution or train a model to solve it.
-```
+
 
 #### Issue 2: Random Errors 
 
-```text
+
 Shopee throws some random error and there is no way to control when the error occurs. Tried multiple ways to identify the error and handle it but still no luck. 
-```
+
 
 ### Approaches That I Took 
 
