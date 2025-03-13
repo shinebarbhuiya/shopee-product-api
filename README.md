@@ -103,9 +103,15 @@ These tokens are generated client-side using JavaScript from their SDK (located 
 
 
 
-### Alternative Approaches
+### Alternative Approaches(Things we can try!)
 
 1. Can try to use burpsuite with Frida to intercept the requests and responses and find the data from their internal API. 
+
+2. Reverse engineer their whole internal API (will take time)
+
+3. Try anti detect browsers or browser fingerpriting to work with multiple accounts.
+
+4. Find out the primary cause of those random erros and try to bypass it.
 
 
 ## Note : It is a complex project and will take time to figure everything out and make it production ready. Also, it is very sensitive and each wrong move just bans the account.
