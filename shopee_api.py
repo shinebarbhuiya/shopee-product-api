@@ -12,7 +12,7 @@ app = FastAPI()
 def get_shopee_data(url: str):
     # Configure Chrome options
     options = uc.ChromeOptions()
-    extension_path = "/home/shine/Desktop/MrScraper_Task/extensions"
+    extension_path = "./extensions"
     options.add_argument(f'--load-extension={extension_path}')
     
     # Initialize response data
