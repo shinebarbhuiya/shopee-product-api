@@ -77,13 +77,37 @@ def get_shopee_data(url: str):
         
         if data_received["value"]:
             response_data = data_received["data"]
-            # Only close if we got a valid response with error_msg: null
-            if isinstance(response_data, dict) and "error_msg" in response_data and response_data["error_msg"] is None:
-                driver.quit()
-                driver = None
-                return response_data
-            else:
-                # Keep browser open for error responses
+            # Keep waiting until we get a valid response (error_msg: null)
+            while True:
+                if isinstance(response_data, dict):
+                    # Check if it's a valid response
+                    if "error_msg" in response_data and response_data["error_msg"] is None:
+                        driver.quit()
+                        driver = None
+                        return response_data
+                    
+                    # Check if it's a captcha response
+                    is_captcha = (
+                        response_data.get("error") == 90309999 or
+                        (
+                            "error_msg" not in response_data and 
+                            any(key in response_data for key in ["0", "1", "2", "3", "4", "5", "6"])
+                        )
+                    )
+                    
+                    if is_captcha:
+                        # Wait for 1 second before checking again
+                        time.sleep(1)
+                        # Reset data_received flag to capture new response
+                        data_received["value"] = False
+                        data_received["data"] = None
+                        # Continue waiting for new response
+                        while not data_received["value"]:
+                            time.sleep(0.5)
+                        response_data = data_received["data"]
+                        continue
+                
+                # If we get here, it's an unexpected response
                 return response_data
         
         raise HTTPException(status_code=404, detail="Failed to get product data")
