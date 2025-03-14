@@ -56,12 +56,7 @@ def get_shopee_data(url: str):
         # Wait for extension to be properly loaded
         time.sleep(2)
         
-        # Close extension tabs
-        for handle in driver.window_handles:
-            driver.switch_to.window(handle)
-            if "inreview.vn" in driver.current_url:
-                driver.close()
-                break
+       
         
         # Switch back to main window
         driver.switch_to.window(driver.window_handles[0])
